@@ -1,39 +1,20 @@
-import pic from'../ax.png'
-import { Container, Row } from 'react-bootstrap';
-import '../assets/singleContent.css'
+import pic from "../ax.png";
+import { Container, Row } from "react-bootstrap";
+import "../assets/singleContent.css";
 
-const SingleContent = ()=>{
-    return(
-        <Container>
-            <Row>
-                <div className="col-md-3 bg-dark m-1 border15 shadow">
-                    <h2 className="text-center">Country</h2>
-                    <img src={pic} alt="" />
-                    <div>
-                        a <br />
-                        b <br />
-                        c <br />
-                        c <br />
-                        c <br />
-
-                    </div>
-                </div>
-
-                <div className="col-md-3 bg-dark m-1 border15 shadow">
-                    <h2 className="text-center">Country</h2>
-                    <img src={pic} alt="" />
-                    <div>
-                        a <br />
-                        b <br />
-                        c <br />
-                        c <br />
-                        c <br />
-
-                    </div>
-                </div>
-            </Row>
-        </Container>
-    );
-}
+const SingleContent = ({ name, region, capital, population, flags }) => {
+  return (
+    <div className="bg-dark m-1 border15 shadow p-3">
+      <h3 className="text-center">{name.common}</h3>
+      <img src={flags.png} alt="" />
+      <div className="mt-3">
+        Capital: {capital} <br />
+        Population: {population} <br />
+        Continent: {region}
+        <br />
+      </div>
+    </div>
+  );
+};
 
 export default SingleContent;

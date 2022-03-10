@@ -4,12 +4,12 @@ import "../assets/navigations.css";
 
 const Navigation = () => {
   return (
-    <div>
+    <div className="mb-3">
       <Navbar className="shadow nav-color">
         <Container>
           <Navbar.Brand>
             <Link to="/" className="navbar-brand">
-              The Movies Portal
+              Countries Portal
             </Link>{" "}
           </Navbar.Brand>
           <Nav className="me-auto">
